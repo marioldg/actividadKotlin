@@ -12,13 +12,16 @@
 
     fun estaBalanceado(Operacion:String):Boolean{
         var simbolos:MutableList<Char> = mutableListOf()
-
+        var abriendo:Int=0
+        var cerrando:Int=0
 
         for (i in Operacion){
             if(i=='{' || i=='[' || i=='('){
                 simbolos.addFirst(i)
+                abriendo++
             }else if (i=='}' || i==']' || i==')'){
                 simbolos.addLast(i)
+                cerrando++
             }else{
                 simbolos.remove(i)
             }
