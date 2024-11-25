@@ -5,9 +5,9 @@
         val palabra2 = readln()
 
         if (sonAnagramas(palabra1,palabra2)){
-            println("Las palabras \"$palabra1\" y \"$palabra2\" son anagramas.")
+            println(" \"$palabra1\" y \"$palabra2\" son anagramas.")
         }else {
-            println("Las palabras \"$palabra1\" y \"$palabra2\" NO son anagramas.")
+            println(" \"$palabra1\" y \"$palabra2\" no son anagramas.")
         }
     }
 
