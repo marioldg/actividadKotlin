@@ -1,17 +1,20 @@
     fun main() {
+        println("Introduce la primera palabra ")
+        val palabra1 = readln() ?: " "
+        println("Introduce la segunda palabra")
+        val palabra2 = readln()
 
-        for (i:Int in 1..100){
-            if(i%3==0){
-                println("tri")
-
-            }else if(i%5==0){
-                println("qui")
-
-            }else if(i%3==0 && i%5==0){
-            println("triqui")
-
-            }else{
-                println(i)
-            }
+        if (sonAnagramas(palabra1,palabra2)){
+            println("Las palabras \"$palabra1\" y \"$palabra2\" son anagramas.")
+        }else {
+            println("Las palabras \"$palabra1\" y \"$palabra2\" NO son anagramas.")
         }
     }
+
+        fun sonAnagramas(palabra1: String, palabra2:String):Boolean{
+            if(palabra1==palabra2){
+                return false
+            }
+            return palabra1.toCharArray().sorted() == palabra2.toCharArray().sorted()
+        }
+
