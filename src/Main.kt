@@ -1,6 +1,6 @@
     fun main() {
-        val acciones = arrayOf("saltar", "saltar", "saltar", "saltar", "saltar")
-        val pista = "||_||"
+        val acciones = arrayOf("correr", "correr", "saltar", "saltar", "correr")
+        val pista = "_|_|_"
         val resultado = Carrera(acciones, pista)
         println("Carrera superada?: $resultado")
 
@@ -26,7 +26,7 @@
 
                 if (acciones[i] != "correr" && acciones[i] != "saltar") {
                     sueloModificado[i]='?'
-                    return false
+                    carreraSuperada = false
                 }
 
                 when {
